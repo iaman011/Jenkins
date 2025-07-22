@@ -1,0 +1,32 @@
+Started by user iaman011
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\test3 with java
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/iaman011/Jenkins.git
+ > git.exe init C:\ProgramData\Jenkins\.jenkins\workspace\test3 with java # timeout=10
+Fetching upstream changes from https://github.com/iaman011/Jenkins.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.47.1.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/iaman011/Jenkins.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/iaman011/Jenkins.git # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 609ab11ac6b5caeffdca36e7d94a46a45d6d3312 (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 609ab11ac6b5caeffdca36e7d94a46a45d6d3312 # timeout=10
+Commit message: "Create HelloWorld.java"
+First time build. Skipping changelog.
+[test3 with java] $ cmd /c call C:\WINDOWS\TEMP\jenkins7786452290414628707.bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\test3 with java>java HelloWorld.java 
+Hello from Java!
+Addition: 30
+Subtraction: -10
+Multiplication: 200
+Division: 0.5
+
+C:\ProgramData\Jenkins\.jenkins\workspace\test3 with java>exit 0 
+Finished: SUCCESS
