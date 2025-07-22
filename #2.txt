@@ -1,0 +1,25 @@
+Started by user iaman011
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\test2
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\test2\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/iaman011/Jenkins.git # timeout=10
+Fetching upstream changes from https://github.com/iaman011/Jenkins.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.47.1.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/iaman011/Jenkins.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 72b02dfa6a5841fb329c2860fec4d6ceb6459d35 (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 72b02dfa6a5841fb329c2860fec4d6ceb6459d35 # timeout=10
+Commit message: "HelloWorld.java Console Output"
+ > git.exe rev-list --no-walk 715033c8971ec8318fa21383c1cb5f5eb585b472 # timeout=10
+[test2] $ cmd /c call C:\WINDOWS\TEMP\jenkins3575109491218097776.bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\test2>python app.py 
+This is a python project from github
+
+C:\ProgramData\Jenkins\.jenkins\workspace\test2>exit 0 
+Finished: SUCCESS
