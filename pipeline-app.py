@@ -1,6 +1,23 @@
 pipeline { // 📦 Starts the Jenkins pipeline block – the foundation of our CI/CD story.
     agent any // 🤖 Tells Jenkins to run this pipeline on any available agent (worker).
 
+    // for time/scheduling using cron job
+     triggers {
+    cron('0 20 * * *') // ⏰ Runs the job every day at 8:00 PM server time
+}
+    '''
+    Explanation of cron('0 20 * * *'):
+ ┌───────────── minute (0)
+ │ ┌───────────── hour (20 → 8 PM)
+ │ │ ┌───────────── day of month (* = every day)
+ │ │ │ ┌───────────── month (* = every month)
+ │ │ │ │ ┌───────────── day of week (* = every day of week)
+ │ │ │ │ │
+ │ │ │ │ │
+ 0  20  *  *  * 
+    '''
+
+
     stages { // 🎬 Begins the list of stages – each stage is like a chapter in our automation journey.
 
         stage('Checkout Code') { // 📥 This stage is about bringing in the source code from GitHub.
